@@ -4,74 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #main-container {
+            display: flex;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1, h3 {
+            margin: 0;
+        }
+
+        .optiuni {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sectiuneProduse {
+            width: 70%;
+            border: 1px solid;
+        }
+
+        .optiune {
+            text-decoration: none;
+            color: black;
+            padding: 0px 10px;
+        }
+
+        .optiune:hover {
+            background-color: lightgray;
+        }
+
+        .produs {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 150px;
+            border: 1px solid lightgray;
+            padding: 10px;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        .produse {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
-    <!--
-    Pentru register:
-    - nume
-    - prenume
-    - email
-    - parola
-    - numar de telefon
-    - data nasterii
-    - dropdown an studiu
-    -->
-    <form>
-        <h1>Register</h1>
-        <label>Nume</label>
-        <input type="text" name="Nume" id="name" />
-       
-        
+    <nav>
+        <h1>My shop</h1>
         <div>
-            <label for="prenume">Prenume</label>
-            <input type="text" name="Prenume" id="prenume" />
+            <span style="margin-right: 20px">Profil</span>
+            <span>Cos</span>
         </div>
+    </nav>
 
-        <div>
-            <label for="email">Email</label>
-            <input type="email" name="Email" id="email" placeholder="ceva@domain.com" />
+    <div id="main-container">
+        <div class="optiuni">
+            <h3>Optiuni</h3>
+            <br>
+            <a href="procesoare" class="optiune">Procesoare</a>
+            <a href="placi-de-baza" class="optiune">Placi de baza</a>
+            <a href="placi-video" class="optiune">Placi video</a>
         </div>
+        <main class="sectiuneProduse">
+            <h3>Produse</h3>
+            <div class="produse">
+                <div class="produs">
+                    <br>
+                    Procesor i7 10700K
+                    <button>Adauga in cos</button>
+                </div>
 
-        <div>
-            <label for="password">Parola</label>
-            <input type="password" name="Password" id="password" />
-        </div>
+                <div class="produs">
+                    <br>
+                    Procesor i7 10700K
+                    <button>Adauga in cos</button>
+                </div>
 
-        <div>
-            <label for="dataNastere">Data nasterii</label>
-            <input type="date" name="dataNastere" id="dataNastere" />
-        </div>
+                <div class="produs">
+                    <br>
+                    Procesor i7 10700K
+                    <button>Adauga in cos</button>
+                </div>
 
-        <div>
-            <label for="nrTelefon">Numar de telefon</label>
-            <input type="tel" pattern="[0-9]{7}" name="nrTelefon" id="nrTelefon" />
-        </div>
-
-        <label for="conditii">Accept TOS</label>
-        <input type="checkbox" name="conditii" id="conditii" required/>
-
-        <div>
-            <label for="anStudiu">An studiu</label>
-            <select name="anStudiu" id="anStudiu">
-                <option value="1">Anul 1</option>
-                <option value="2" selected>Anul 2</option>
-            </select>
-        </div>
-
-        <div>
-            <div>
-                <label for="sec">Intrebare securitate: 1 + 1 =</label>
-                <input type="number" name="sec" min="0" max="10" id="sec" />
+                <div class="produs">
+                    <br>
+                    Procesor i7 10700K
+                    <button>Adauga in cos</button>
+                </div>
             </div>
+        </main>
+    </div>
 
-            <div>
-                <label for="refferal">Cod invitatie</label>
-                <input type="text" name="refferal" value="reducere80" disabled id="refferal" />
-            </div>
-            
-            <input type="reset" name="Reset" />
-            <input type="submit" name="Register" />
-        </div>
-    </form>
+    <footer>footer</footer>
 </body>
 </html>
